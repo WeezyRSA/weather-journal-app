@@ -53,13 +53,13 @@ const postData = async (url = '', data = {}) => {
 };
 const updateUI = async () => {
   
-  const request = await fetch('/');
+  const request = await fetch('/all');
   
   try {
     const allData = await request.json();
-    // document.getElementById('date').innerHTML = allData[0].date;
-    // document.getElementById('temp').innerHTML = allData[0].temperature;
-    // document.getElementById('content').innerHTML = allData[0].userResponse;
+    document.getElementById('date').innerHTML = allData[0].date;
+    document.getElementById('temp').innerHTML = allData[0].temperature;
+    document.getElementById('content').innerHTML = allData[0].userResponse;
   }
   catch(e) {
     console.log('error: ' + e.toString());

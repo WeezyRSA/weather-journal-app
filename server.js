@@ -23,8 +23,7 @@ const listening = () => {
 }
 app.listen(port, listening);
 
-app.get('/', function(req, res) {
-  console.log(projectData);
+app.get('/all', function(req, res) {
   res.send(projectData);
 });
 app.post('/entry', function(req, res) {
